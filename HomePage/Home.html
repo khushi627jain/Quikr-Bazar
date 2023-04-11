@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuikrBazar: Online Shopping</title>
+
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <style>
+    body{
+        background: #f3f3f3;
+    }
+    #slideContent{
+        background-color: white;
+        width: 1100px;
+        position: relative;
+        margin: auto;
+        padding: 15px 25px 15px 25px;
+    }
+  .swiper {
+    width: 900px;
+  
+   position: relative;
+    
+  }
+  .swiper-wrapper{
+    background-color: white;
+  }
+  .swiper-slide p{
+    text-align: center;
+  }
+  img{
+    width: 180px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+   #Buy_Sell_heaed{
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: xx-large;
+    text-align: center;
+   }
+
+ </style>
+</head>
+<body>
+    <!-- navbar -->
+ <div></div>
+ <!-- navbar -->
+ <h2 style="margin-left: 200px;">Most Popular Products</h2>
+
+ <div id="slideContent">
+
+  <div #swiperRef="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="C:\Users\BNP\OneDrive\Desktop\slideeee\CreatingSlide\photo.jpg" alt=""> 
+        <p>shailesh</p>
+      </div>
+
+
+    </div>
+
+    <div id="But">
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</div>
+    <!-- //slideContent -->
+
+    <h2 id="Buy_Sell_heaed" >Buy and Sell from 1200+ Cities Across India</h2>
+    
+</body>
+<!-- JavaScript -->
+
+  
+  // <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      centeredSlides: true,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+  
+    
+</script>
+</html>

@@ -6,15 +6,15 @@ myForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
     let email = document.getElementById("email").value;
-    console.log(email)
+
     let name = document.getElementById("name").value;
-    console.log(name)
+
     let mobileNo = document.getElementById("mobileNo").value;
-    console.log(mobileNo)
+
     let password = document.getElementById("password").value;
-    console.log(password)
+
     let confirmPassword = document.getElementById("confirmPassword").value;
-    console.log(confirmPassword)
+
 
     if (email == "" || name == "" || mobileNo == "" || password == "" || confirmPassword == "") {
         alert("Please fill in all required fields.");
@@ -26,8 +26,14 @@ myForm.addEventListener("submit", (event) => {
     }
 
     // save the form data to local storage
-let Data = { email:email, name:name, mobileNo:mobileNo, password:password, confirmPassword:confirmPassword }; 
-userData.push(Data);
+    let Data = {
+        email: email,
+        name: name,
+        mobileNo: mobileNo,
+        password: password,
+        confirmPassword: confirmPassword
+    };
+    userData.push(Data);
 
     console.log(userData);
 
@@ -36,8 +42,6 @@ userData.push(Data);
     alert("Signup successful! You will be redirected shortly.");
 
     window.location.href = "password.html";
-
-
 
     document.getElementById("email").value = "";
     document.getElementById("name").value = "";

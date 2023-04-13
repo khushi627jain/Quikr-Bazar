@@ -7,19 +7,24 @@ const password=document.getElementById("password")
 document.getElementById("myForm").addEventListener("submit",(event)=>{
     event.preventDefault();
     userData.map((elem)=>{
-    const emailvalue=email.value;
-    const passwordvalue=password.value;
+        const emailvalue=email.value;
+        const passwordvalue=password.value;
 
-
-    if(emailvalue==elem.email && passwordvalue==elem.password ){
-        alert("login Successfull")
-    }else{
+let name=document.createElement("p");
+name.innerHTML=elem.name;
+        // let loginObj={
+        //     name:name
+        // }
+        
+        if(emailvalue==elem.email && passwordvalue==elem.password ){
+            localStorage.setItem("userData",JSON.stringify(userData));
+             console.log("YES")
+            // alert("login Successfull")
+            location.href="navbar.html"
+        }else{
             alert("wrongCrenditals")
         }
     })
-    document.getElementById("password").textContent="";
-
-
-
 })
+
 

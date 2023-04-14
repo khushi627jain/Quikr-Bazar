@@ -25,13 +25,15 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
         // localStorage.setItem("userData", JSON.stringify(userData));
         console.log("YES")
         location.href = "HomePage.html"
+
     } else if (emailvalue == "" || passwordvalue == "") {
         alert("Please fill in all required fields.");
     }
     else {
         alert("wrongCrenditals")
     }
-
+    document.getElementById("email").value="";
+    document.getElementById("password").value="";
 
 })
 

@@ -1,7 +1,7 @@
 let currentCategory=localStorage.getItem("category");
 console.log(currentCategory)
 let pageNo=1;
-let url=`http://localhost:8080/product?subCategory=${currentCategory}&_page=${pageNo}&_limit=7`;
+let url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${currentCategory}&_page=${pageNo}&_limit=7`;
 console.log(url)
 async function main(url){
      data=await fetch(url)
@@ -67,11 +67,11 @@ function showAllDetails(ele){
         const checkbox=event.target
         if(checkbox.checked){
         const productType = event.target.getAttribute("data-page-type");
-        url=`http://localhost:8080/product?subCategory=${productType}`
+        url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${productType}`
         main(url)
         }
         else{
-          url=`http://localhost:8080/product?subCategory=${currentCategory}`
+          url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${currentCategory}`
           main(url)
         }
       });
@@ -169,7 +169,7 @@ function showAllDetails(ele){
         filteredData.sort(function(a, b) {
             return a.date - b.date;
           });
-          // url=`http://localhost:8080/product?_date<10`
+          // url=`https://fragile-zipper-ox.cyclic.app/product?_date<10`
           console.log(filteredData)
         displayData(filteredData);
       }
@@ -197,7 +197,7 @@ function showAllDetails(ele){
 
     //   for clearing all filter
     document.getElementById("clearAllFilter").addEventListener("click",function(){
-        url=`http://localhost:8080/product?subCategory=${currentCategory}`
+        url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${currentCategory}`
         var checkboxes = document.querySelectorAll('input[type=checkbox]');
         for (var i = 0; i < checkboxes.length; i++) {
           checkboxes[i].checked = false;

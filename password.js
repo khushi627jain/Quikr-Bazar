@@ -24,7 +24,7 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
     if (temp) {
         // localStorage.setItem("userData", JSON.stringify(userData));
         console.log("YES")
-        location.href = "navbar.html"
+        location.href = "HomePage.html"
     } else if (emailvalue == "" || passwordvalue == "") {
         alert("Please fill in all required fields.");
     }

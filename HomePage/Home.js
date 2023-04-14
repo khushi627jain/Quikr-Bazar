@@ -47,8 +47,7 @@
         });
         
     }
-    // let appendMain = document.querySelector("#appendMain");
-    // let invalue = document.querySelector("#input").value;
+    
     let response = getData(
             `http://localhost:3000/posts`
          );
@@ -59,4 +58,24 @@
         console.log(err);
     });
 
-    // fetching data from API and Showing on page
+    // navbar js ==========
+    let userData=JSON.parse(localStorage.getItem("userData"))||[];
+
+    console.log(userData);
+    
+    
+    let name=document.getElementById("login");
+    
+    userData.forEach(ele => {
+        name.innerHTML=` Welcome! ${ele.name}`;
+        console.log(ele.name);
+    });
+    
+
+    // navbar js ends===============
+
+
+    // for search 
+
+    
+const searching = document.getElementById("search").value ;

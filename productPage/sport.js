@@ -37,9 +37,30 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-document.getElementById("strollers").addEventListener("click",function(){
- event.preventDefault()
-  localStorage.setItem("category",'strollers');
-  console.log(localStorage.getItem("category"))
-  window.location.href="product.html"
-})
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+//for bicycle 
+let Bicycle = document.querySelectorAll("#bicycleSell");
+Bicycle.forEach(ele => {
+  ele.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.setItem("category","Bicycle");
+    window.location.href = "sportProduct.html";
+  });
+});
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+//for fitness 
+let fitness  = document.querySelectorAll("#fitness");
+fitness.forEach(ele => {
+  ele.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.setItem("category", "Fitness");
+    window.location.href = "sportProduct.html";
+  });
+});
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+

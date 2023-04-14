@@ -94,30 +94,37 @@ body{
   margin-left: 20px;
   margin-right: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  gap:30px;
 }
 #tag{
-  /* position: absolute; */
-  margin: 0px 0px 10px 10px;
+  margin: 0px 0px 15px 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-size: 20px;
+font-size: 25px;
 font-weight: 500;
-color:
-#333f48;
+color:light black;
 }
 #topCategoriesItem{
  justify-content: space-around;
  margin: auto;
 }
+
 #topCategories a{
   text-decoration: none;
   color:
   #333f48;
   font-weight: 100;
 }
+
 #topCategories span{
   color: gray;
   font-weight: 1000;
 }
+#topCategoriesItem img{
+
+  width: 50px;
+  height: 50px;
+}
+
 #show{
   background-color: white;
   width: 80%;
@@ -125,12 +132,26 @@ color:
   padding-top: 10px;
 
 }
+.topCategoriesItem{
+  justify-content: space-around;
+  margin: auto;
+ }
+ .topCategoriesItem img{
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
+  width: 80px;
+  height:80px;
+}
+#topCategories a:hover{
+  color:#0089b7 ;
+}
+#topCategories span:hover{
+  color:#0089b7
+}
 #topCategories~hr{
-  color:red;
-  font-weight: 100;
+  border: none;
+  height: 0.5px;
+  background-color: rgba(0, 0, 0, 0.1); 
+  margin: 20px 0;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
@@ -138,21 +159,44 @@ color:
 /* review@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2 */
 #showReview{
   display: flex;
-  justify-content:center
+  justify-content:center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 #reviewHeading{
   display: flex;
   justify-content:space-between;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-bottom: 20px;
 }
 #reviewHeading span{
   font-size: 23px;
   color: black;
 margin-right: 10px;
 }
+/* #re */
 #reviewHeading>div>p{
-  color: gray;
+  color:gray;
   font-family: 1000;
+
+}
+#reviewHeading>div>button:hover{
+  background-color: #0089b7;
+  color: white;
+}
+#reviewHeading>div>button{
+  color:#0089b7;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6%;
+  
+  margin: 13px 3px 0px 0px;
+  width: 150px;
+  height: 80%;
+  border-style:solid;
+  border-color: #0089b7;
+  background-color: white;
 }
 #reviewList{
   width: 60%;
@@ -166,20 +210,34 @@ margin-right: 10px;
   width:60%;
   float: left;
   margin-top: -12px;
-  margin-left: 18px;
+
 }
 #review{
   width: 50%;
 }
 #review p{
-  width: 60%;
+  width: 80%;
+  margin-top: -10px;
+  color:gray;
+  font-style: italic;
+  word-spacing: 2px;
+  font-size: 18px;
+}
+#review>p:nth-child(1){
+  font-size:x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  color:black;
+  font-weight: 500;
 }
 #showReview span{
 color: rgba(238, 255, 0, 0.838);
-font-size: 25px;
+font-size: 18px;
+margin-left: 5px;
+margin-right: 5px;
 }
 
-.icon-cot {
+/* .icon-cot {
   font-family: 'CustomIconFont';
   font-size: 20px;
   font-style: normal;
@@ -189,4 +247,50 @@ font-size: 25px;
 
 .icon-cot:before {
   content: "\E001";
+} */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#fashDiv{
+  width: 100%;
+  background-color: white;
+  padding: 0px 5px 0px 5px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid gray;
+}
+#fash {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 20px 10px 10px 20px;
+ margin-left: 200px;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#fash>div {
+  display: flex;
+  /* gap: 10px; */
+  width: 500px;
+  
+}
+
+#spanFash{
+color:#333f48;
+ font-size: 50px;
+ margin-right: 20px;
+ margin-top: 50px;
+ 
+}
+
+#fash hr{
+  transform: rotate(180deg);
+   margin-right: 15px;
+  margin-left: 15px; 
+}
+#fash p{
+  width: 70%;
 }

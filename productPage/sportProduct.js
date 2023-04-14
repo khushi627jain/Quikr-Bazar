@@ -1,7 +1,8 @@
 let currentCategory=localStorage.getItem("category");
 console.log(currentCategory)
-let data="";
-let url=`http://localhost:8080/product?subCategory=${currentCategory}`;
+let pageNo=1;
+let url=`http://localhost:8080/product?subCategory=${currentCategory}&_page=${pageNo}&_limit=7`;
+console.log(url)
 async function main(url){
      data=await fetch(url)
     data =await data.json()
@@ -54,7 +55,7 @@ function showAllDetails(ele){
   }
   arr.push(allDetails)
   localStorage.setItem("allProductDetails",JSON.stringify(arr))
-  location.href="productDetailsPage.html"
+  location.href="sportDetails.html"
 }
 
 // filtering according to type of product
@@ -197,6 +198,10 @@ function showAllDetails(ele){
     //   for clearing all filter
     document.getElementById("clearAllFilter").addEventListener("click",function(){
         url=`http://localhost:8080/product?subCategory=${currentCategory}`
+        var checkboxes = document.querySelectorAll('input[type=checkbox]');
+        for (var i = 0; i < checkboxes.length; i++) {
+          checkboxes[i].checked = false;
+        }
         console.log(url)
         main(url)
     })
@@ -239,6 +244,29 @@ function showAllDetails(ele){
     element.style.display="none"
   })
   
+// previous side
+document.getElementById("previous").addEventListener("click",previous)
+function previous(){
+    if(pageNo==1){
+        return;
+    }
+    url=url.replace(`&_page=${pageNo}&_limit=7`,``)
+    pageNo--;
+    document.getElementById("pageNo").textContent=pageNo
+    url+=`&_page=${pageNo}&_limit=7`
+    main(url);
+}
+//next side
+document.getElementById("next").addEventListener("click",next)
+function next(){
+  url=url.replace(`&_page=${pageNo}&_limit=7`,``)
+    pageNo++;
+    document.getElementById("pageNo").textContent=pageNo
+    
+    url+=`&_page=${pageNo}&_limit=7`
+  console.log(url)
+    main(url);
+}
 
 
  main(url);

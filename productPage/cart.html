@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+     
+
+        a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+       
+
+        
+        #cartprod{
+            width: 80%;
+            display: flex;
+            gap: 30px;
+            margin: auto;
+           justify-content: center;
+           /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
+           /* margin-bottom: 20px; */
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        #cartprod>img{
+            width: 160px;
+            height: 180px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+            padding: 0px 0px 10px 10px;
+            margin: auto;
+            
+            
+        }
+        /* #cartprod>.clas{
+         border: 2px solid;
+        } */
+        .class{
+            width: 40%;
+            margin-left: 20px;
+           
+        }
+   
+        .clas{
+           
+            width: 55%;
+        }
+        
+      
+       .clas p{
+        width: 35px;
+       }
+       
+       #rsk{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        
+       }
+       h2{
+        text-align: center;
+       }
+       /* #Offer>div>#carval{
+        border: 3px solid black;
+       } */
+        #cardval>p{
+            font-size: 40px;
+            font-weight: bold;
+        }
+       #cartval>p>span{
+        font-size: 40px;
+       }
+       #btn{
+        /* background-color: rgb(51,63,72); */
+        background-color: #0089b7;
+        color: aliceblue;
+        font-size: larger;
+        border: none;
+        width: 25px;
+        height: 25px;
+       }
+       #btn:hover, #delbtn:hover{
+        background-color: black;
+        color: #0089b7;
+       }
+     #delbtn{
+      /* background-color:rgb(51,63,72); */
+      background-color:#0089b7;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      width: 90px;
+      height: 30px;
+      margin-top: 84px;
+      margin-right: 20px;
+
+    }
+    #cardval>p{
+        text-align: center;
+    }
+    #Offer{
+
+        width: 100%;
+        height: 180px;
+        text-align: center;
+        margin: 10px 0px -60px 0px;
+       
+    }
+    #Offer>div>p{
+          font-weight: bold;
+          font-size: 25px;
+    }
+   
+   #Offer>div>button{
+    /* background-color:rgb(51,63,72); */
+    background-color: #0089b7;
+    color: white;
+    height: 35px;
+    width: 80px;
+    border: none;
+    font-size: large;
+   }
+   #Offer>div>button:hover{
+    background-color: black;
+    color: #0089b7;
+   }
+   /* proceed button */
+   #kranti>button{
+      height: 50px;
+        width: 350px;
+       
+        color: white;
+        border: none;
+        font-size: 25px;
+        /* background-color: rgb(51,63,72); */
+        background-color: #0089b7;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+       
+       
+   }
+   #kranti>button:hover{
+      cursor: pointer;
+    background-color:black;
+    color: #0089b7;
+   }
+   #kranti{
+    text-decoration: none;
+   }
+   .k>button{
+    width: 140px;
+    height: 45px;
+    background-color: rgb(51,63,72);
+    color: white;
+    margin-right: 23px;
+   }
+   .k>button:hover{
+    background-color: black;
+    color: #0089b7;
+   }
+   #project{
+     height: 50px;
+     
+     background-color: rgb(38, 34, 34);
+   }
+   #prefer>div{
+         display: flex;
+   }
+   #preft{
+    
+    display: flex;
+    width: 80%;
+   justify-content: center;
+   margin: auto;
+ 
+   gap: 50px;
+  
+   
+   }
+   #shu{
+   
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 30%;
+    height: fit-content;
+   
+ /* margin: auto; */
+   }
+   #child{
+    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 70%;
+   margin: auto;
+   }
+   #promo{
+    width: 250px;
+    height: 30px;
+   }
+   #shubham{
+    display: flex;
+    /* gap: 10px; */
+    /* align-items: center; */
+     margin-top: -13px; 
+    margin-bottom: 15px;
+    
+   }
+   #shubham>img{
+    width: 250px;
+    height: 200px;
+    margin-left: -40px;
+    /* margin-left: 10px; */
+    /* margin-top: -10px; */
+   }
+  #shubham>div>p{
+    
+    /* margin-left: 10px; */
+    width: 150px;
+    text-justify: distribute-all-lines;
+  }
+  #pankaj-hr{
+    width: 100%;
+   background-color: #0089b7;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+ button:hover{
+  background-color: black;
+  color: #0089b7;
+ }
+  #email{
+    width: 400px;
+    height: 40px;
+    margin-left: 20px;
+  }
+  #shubham-span1{
+    color: red;
+
+  }
+  #shubham-span2{
+   color:  rgb(24, 29, 33);
+   font-size: 15px;
+   font-weight: bold;
+  }
+  #shubham-span3{
+    text-decoration: underline;
+  }
+  #pojit{
+    width:100%;
+    height: 2px;
+    /* background-color: black; */
+    background-color: #0089b7;
+  }
+  nav+hr {
+    margin-top: 4.5%;
+}
+  
+   
+   @media only screen and (max-width: 900px) {
+        /* Medium Screen  */
+        #parent>.sp{
+            display: flex;
+            flex-direction: row;
+        }
+        #psb{
+            display: flex;
+            flex-direction: row;
+        }
+        #fash{
+            display: flex;
+            
+        }
+        #fash>div{
+            display: flex;
+        }
+        #cartprod{
+            display: flex;
+           
+        }
+        #prefer>div{
+         display: flex;
+   }
+   #preft{
+    
+    display: flex;
+   
+   
+   }
+      }
+      @media only screen and (max-width: 500px) {
+        /* Medium Screen  */
+        #parent>.sp{
+            display: flex;
+            flex-direction: column;
+        }
+        #psb{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+           
+        }
+        #fash {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#fash>div {
+    display: flex;
+    gap: 20px;
+}
+#fash img {
+    width: 60%;
+    height: 60%;
+}
+#fash hr{
+    transform: rotate(180deg);
+     margin-right: 15px;
+    margin-left: 15px;
+}
+        
+        
+        #cartprod{
+            display: flex;
+           flex-direction: column;
+        }
+        #prefer>div{
+         display: flex;
+         flex-direction: column;
+   }
+   #preft{
+    display: flex;
+    flex-direction: column;
+   }
+      }
+    </style>
+</head>
+<body style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+
+
+  
+       <hr>
+  
+  
+    <div id="pankaj-hr" >
+     <h4>SHOP </h4>
+     <h4>SHOP </h4>
+     <h4>SHOP </h4>
+     <h4>SHOP </h4>
+     
+    </div>
+       
+   
+    <h2>Your Cart:- <span id="per">0</span>  Items</h2>
+     <div id="preft">
+      <div id="child">
+           
+      </div>
+      <div id="shu">
+        <div id="Offer">
+            <div>
+                <p>Apply Promo Code</p>
+                <input type="text" id="promo">
+                <button id="poi">Check</button>
+            </div> <br>
+        </div>
+          <div id="cardval">
+            <p>Total Price:-$ <span id="pr"> </span></p>
+          </div>
+            
+          
+          <div id="shubham">
+              <img src="https://imgs.search.brave.com/r_-19LZ7YF4gOuItqv711nhWOSdv8U0gozUBX7NTD_8/rs:fit:905:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5h/bDJ2WDlaOXNveS0y/a0Y3M0dEclNnSGFE/NCZwaWQ9QXBp" alt="">
+              <div>
+                <p><span id="shubham-span1">Enjoy $10 OFF Today*</span>  on your first purchase with the <span id="shubham-span2">QUIKR BAZAAR® Credit Card</span>  at time of account opening. <span id="shubham-span3">Learn More</span> </p>
+              </div>
+          </div>
+          <div>
+            <a id="kranti" href="address.html"> <button>Checkout</button> </a>
+          </div>
+          <div id="pankaj-hr"></div>
+      </div>
+      
+    
+      
+    </div>
+      <span id="ok"> </span>
+      
+      <hr id="pojit">
+   
+           
+    
+      
+ 
+    
+</body>
+</html>
+<script>
+var cartAr=JSON.parse(localStorage.getItem("cartProducts")) || [];
+
+ 
+if(cartAr===0){
+     document.querySelector("#child").value;
+}else{
+    
+    displayCart(cartAr);
+    updateCount(cartAr);
+    caltotal(cartAr)
+    
+    
+    
+}
+
+function displayCart(cartAr){
+    document.querySelector("#child").textContent="";
+    // console.log(cartAr);
+       cartAr.map(function(elem){
+        var pyr=localStorage.getItem("sizeList");
+       var div=document.createElement("div");
+       div.setAttribute("id","cartprod");
+       var image=document.createElement("img");
+       image.setAttribute("src",elem.url);
+       image.setAttribute("alt",elem.title);
+       
+       var divp=document.createElement("div");
+       divp.setAttribute("class","clas");
+
+       var h3=document.createElement("h3");
+       h3.textContent=elem.title;
+
+      //  var p=document.createElement("h2");
+      //  p.textContent="Price:"+elem.price;
+
+      //  var pa=document.createElement("p");
+      //  pa.textContent="Width:"+pyr;
+
+       
+
+       var diva=document.createElement("div");
+       diva.setAttribute("id","rsk");
+       
+       var price=document.createElement("h2");
+       price.textContent="₹"+elem.price;
+
+       var quantity=document.createElement("h2");
+         quantity.textContent="Qty";
+
+         var span=document.createElement("span");
+         span.textContent=" "+"1";
+
+        
+
+       var increase=document.createElement("button");
+       increase.setAttribute("id","btn")
+          increase.textContent="+";
+          increase.onclick=function(){
+            increaseval(span.textContent);
+          };
+          function increaseval(value){
+              var pr=parseInt(value)+1;
+              var va=pr*(elem.price);
+              span.textContent=pr;
+              price.textContent="₹"+va;
+              var a= document.getElementById("pr").textContent;
+             var last=parseInt(a)+parseInt(elem.price);
+             document.getElementById("pr").textContent=last;
+
+          }
+         
+          var decrease=document.createElement("button");
+          decrease.setAttribute("id","btn")
+          decrease.textContent="-";
+          decrease.onclick=function(){
+            decreaseval(span.textContent);
+          };
+          function decreaseval(value){
+            if(value==1){
+                return ;
+             }else{
+            var pr=parseInt(value)-1;
+            var va=pr*elem.price
+            span.textContent=pr;
+              price.textContent="₹"+va;
+          var a= document.getElementById("pr").textContent;
+       var last=parseInt(a)-parseInt(elem.price);
+        document.getElementById("pr").textContent=last;
+        }
+        
+            } 
+          
+
+          var tree=document.createElement("div");
+         tree.setAttribute("id","pers");
+
+         var del=document.createElement("button");
+         del.setAttribute("id","delbtn")
+         del.textContent="Remove";
+         del.addEventListener("click",function(){
+           delrow(elem);
+      });
+      
+        quantity.append(span);
+        diva.append(increase,quantity,decrease);
+        divp.append(h3,price);
+        tree.append(del);
+       
+        div.append(image,divp,diva,tree);
+        document.querySelector("#child").append(div);
+
+    
+});
+
+}
+
+// console.log(cart);
+function delrow(elem){
+      // console.log(typeof cart);
+       cartAr.splice(elem,1);
+        // console.log(p);
+        localStorage.setItem("cartProducts",JSON.stringify(cartAr))
+        displayCart(cartAr);
+        caltotal(cartAr);
+        updateCount(cartAr);
+    }
+var pert=localStorage.getItem("cartper")
+function updateCount(cartAr){
+    document.getElementById("per").textContent=cartAr.length;
+    localStorage.setItem("cartper",cartAr.length);
+}
+
+ var cart=localStorage.getItem("cartp")
+function caltotal(){
+    var carval=0;
+    for(var i=0;i<cartAr.length;i++){
+        carval+=parseInt(cartAr[i].price);
+         
+    }
+    document.getElementById("pr").textContent=carval;
+   localStorage.setItem("cartp",(carval) );
+   }
+   document.querySelector("#poi").addEventListener("click", checkpu);
+   function checkpu(){
+    // event.preventDefault();
+        var ch = document.getElementById("promo").value;
+        // console.log(ch);
+        if(ch =="keep shopping"){
+            var temp = document.createElement("p");
+            temp.setAttribute("class","krp");
+             temp = "Hurray!... You got 30% off";
+            // console.log(temp);
+            document.getElementById("Offer").append(temp);
+            var t = parseInt(document.getElementById("pr").textContent);
+            var change = (t*3)/10;
+            document.getElementById("pr").textContent = t - change;
+        }
+        else{
+          alert("Your Promo code is `keep shopping`")
+        }
+    }
+    var username=localStorage.getItem("name1");
+    if(username){
+    document.getElementById("wxs").textContent=username;
+    }else{
+      document.getElementById("wxs").textContent="Sign In/Join now";
+    }
+ 
+</script>

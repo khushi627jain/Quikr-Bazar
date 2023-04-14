@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Page</title>
+    <link rel="stylesheet" href="Address.css">
+    
+</head>
+<body style="font-family: inter, sans-serif;">
+   
+    <div id="navbar_Address">
+        <nav>
+            <img src="C:\Users\BNP\OneDrive\Desktop\QuikrBazar_project\Quikr-Bazar\Sources\company_LOGO\logo_download.png"
+             alt="" style="width: 15%;">
+           
+            <div>
+                <a href="Address.html" style="text-decoration: none; color:#008bcf; font-size: x-large;" > <p>Address</p> </a>
+            </div>
+              <div> 
+                <a href="pay.html" style="text-decoration: none; color:#008bcf; font-size: x-large;"> <p>Payment</p> </a>
+            </div>
+              
+        </nav>
+    </div>
+    <img style="margin-left: 900px; margin-top:0px" src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/header-address.svg" alt="">
+
+    <div style="margin-top: -120px;" id="parent">
+        <div id="text_content">
+            <h1>Add Your  <span style="color:#008bcf;"> Address </span></h1>
+            <p id="Detail">Detailed address will help our delivery partner reach your doorstep quickly</p>
+        </div>
+
+       <div style="margin-top: 5%;">
+        <form action="">
+                    
+                    <div style="display: flex;justify-content: space-around;">
+                            <div>
+                                <label for="">Enter Name :</label>
+                                <input type="text" placeholder="Name" id="in1" required>
+                            </div>
+                            <div>
+                                <label for="">Enter Email :</label>
+                                <input type="email" placeholder="email" id="in2" required>
+                            </div>
+                            <div>
+                                <label for="">Phone No. :</label>
+                                <input type="number" placeholder="Phone No" id="in3" required>
+                            </div>
+                            
+                            
+
+                    </div>
+                    <div style="display: flex;justify-content: space-around;">
+                            <div>
+                                <label for="">Enter Address :</label>       
+                                <input type="text" placeholder="Address" id="in4" required>
+                            </div>
+                            <div>
+                                <label for="">Road/Colony :</label>
+                                <input type="text" placeholder="Road/Colony Name" id="in6" required>
+                            </div>
+                           
+                            <div>
+                                <label for=""> Pin Code :</label>
+                                <input type="number" placeholder="Pin Code" id="in5" required>
+                             </div>
+                           
+                    </div>
+                    <div  style="display: flex;justify-content: space-around;">
+                        <button id="sub_form">Submit</button>
+                   
+                        
+                    </div>
+            </form>
+            <!-- <button> <a href="http://google.com/" style="text-decoration: none;color: white;">Goto Payment page</a></button>
+                  -->
+                  <div id="btttn_for_Payment_page">
+
+                  </div>
+       </div>
+
+       
+      
+    </div>
+
+</body>
+<script>
+   
+  
+       document.querySelector("form").addEventListener("submit", address_add);
+
+    var Addpage = [];
+    
+
+    function address_add(){
+
+    event.preventDefault();
+
+    
+
+    var name = document.querySelector("#in1").value ;
+    var email = document.querySelector("#in2").value ;
+    var phone_no = document.querySelector("#in3").value ;
+    var address = document.querySelector("#in4").value ;
+    var pincode = document.querySelector("#in5").value ;
+    var road_no = document.querySelector("#in6").value ;
+
+    
+            var page = {name:name, email:email, phone_no:phone_no, address:address, pincode:pincode, road_no:road_no};
+    Addpage.push(page);
+    localStorage.setItem("Address-data", JSON.stringify(Addpage));
+    console.log(Addpage);
+
+    alert("Address Added Successfully")
+
+    let btttn = document.createElement("a");
+    btttn.href = "https://www.google.com/";
+    btttn.textContent = "Goto Payment Page";
+    btttn.id = "payment_page_link";
+    btttn.style.marginLeft = "450px";
+    btttn.style.marginTop = "40px";
+
+    document.querySelector("form").append(btttn);
+   
+
+
+    } //address_add
+    
+  
+       
+
+  
+  
+</script>
+</html>

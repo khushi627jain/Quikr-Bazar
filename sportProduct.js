@@ -18,7 +18,7 @@ data.map(function(ele){
    let image=document.createElement("img")
    image.src=ele.url
    let price=document.createElement("h3")
-      price.textContent=ele.price+"₹"
+      price.textContent="₹"+ele.price
    let title=document.createElement("p")
    title.textContent=ele.title
    let infoDiv=document.createElement("div")
@@ -67,15 +67,23 @@ function showAllDetails(ele){
         const checkbox=event.target
         if(checkbox.checked){
         const productType = event.target.getAttribute("data-page-type");
-        url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${productType}`
+        // url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${productType}`
+        // url
+        url = url.replace(`&_page=${pageNo}&_limit=7`, '&_page=1&_limit=7');
+        url+=`&subCategory=${productType}`
+        pageNo=1;
+        document.getElementById("pageNo").textContent=pageNo
+        console.log(url)
         main(url)
         }
         else{
           url=`https://fragile-zipper-ox.cyclic.app/product?subCategory=${currentCategory}`
+          console.log(url)
           main(url)
         }
       });
     });
+
 
 
     // filtering according to the limit of price

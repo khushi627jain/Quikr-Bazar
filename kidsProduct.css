@@ -78,10 +78,14 @@ margin-bottom: -12px;
     color: white;
     border-radius: 3%;
     border-color: none;
-    /* font-weight: 600; */
+  
     border:none;
   width: 40%;
   height: 2rem;
+}
+#showProduct button:hover{
+  background-color: black;
+  color: #0083ca;
 }
 /* ###########################################################3 */
 /* filterpart!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 */

@@ -11,6 +11,23 @@
     <style>
      
 
+     #hello{
+     
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+     }
+     #hello h3{
+      color: #0089b7;
+     }
+     
+     #hello2{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 15px;
+     }
+     
         a {
     text-decoration: none;
     color: black;
@@ -52,7 +69,9 @@
             width: 55%;
         }
         
-      
+      #pr{
+        margin-top: 15px;
+      }
        .clas p{
         width: 35px;
        }
@@ -70,9 +89,19 @@
        /* #Offer>div>#carval{
         border: 3px solid black;
        } */
+       #cardval{
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+       }
         #cardval>p{
-            font-size: 40px;
+            /* font-size: 40px; */
             font-weight: bold;
+            margin-left: -10px;
+        }
+      
+        #hello2 p{
+          margin-left: -5px;
         }
        #cartval>p>span{
         font-size: 40px;
@@ -117,7 +146,13 @@
           font-weight: bold;
           font-size: 25px;
     }
-   
+   #showPrice{
+    display: flex;
+    
+   }
+   .showPrice{
+    margin-left: 20px;
+   }
    #Offer>div>button{
     /* background-color:rgb(51,63,72); */
     background-color: #0089b7;
@@ -130,6 +165,9 @@
    #Offer>div>button:hover{
     background-color: black;
     color: #0089b7;
+   }
+   #spanAmount{
+    margin-top: 15px;
    }
    /* proceed button */
    #kranti>button{
@@ -373,14 +411,25 @@
             </div> <br>
         </div>
           <div id="cardval">
-            <p>Total Price:-$ <span id="pr"> </span></p>
+            <p>Total Price:-</p>
+<div id="showPrice" class="showPrice"><p>₹</p><span id="pr"></span></div>
+            
           </div>
             
-          
+          <div id="hello">
+            <p>Shipping Charges</p>
+            <h3>FREE..</h3>
+          </div>
+          <div id="hello2">
+            <p>Payable Amount</p>
+            <div id="showPrice"><p>₹</p><span id="spanAmount"></span></div>
+            
+           
+          </div>
           <div id="shubham">
               <img src="https://imgs.search.brave.com/r_-19LZ7YF4gOuItqv711nhWOSdv8U0gozUBX7NTD_8/rs:fit:905:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5h/bDJ2WDlaOXNveS0y/a0Y3M0dEclNnSGFE/NCZwaWQ9QXBp" alt="">
               <div>
-                <p><span id="shubham-span1">Enjoy $10 OFF Today*</span>  on your first purchase with the <span id="shubham-span2">QUIKR BAZAAR® Credit Card</span>  at time of account opening. <span id="shubham-span3">Learn More</span> </p>
+                <p><span id="shubham-span1">Enjoy ₹10 OFF Today*</span>  on your first purchase with the <span id="shubham-span2">QUIKR BAZAAR® Credit Card</span>  at time of account opening. <span id="shubham-span3">Learn More</span> </p>
               </div>
           </div>
           <div>
@@ -470,8 +519,10 @@ function displayCart(cartAr){
               var va=pr*(elem.price);
               span.textContent=pr;
               price.textContent="₹"+va;
+              
               var a= document.getElementById("pr").textContent;
              var last=parseInt(a)+parseInt(elem.price);
+             document.getElementById("spanAmount").textContent=last;
              document.getElementById("pr").textContent=last;
 
           }
@@ -493,6 +544,7 @@ function displayCart(cartAr){
           var a= document.getElementById("pr").textContent;
        var last=parseInt(a)-parseInt(elem.price);
         document.getElementById("pr").textContent=last;
+        document.getElementById("spanAmount").textContent=last;
         }
         
             } 
@@ -545,6 +597,7 @@ function caltotal(){
          
     }
     document.getElementById("pr").textContent=carval;
+    document.getElementById("spanAmount").textContent=carval;
    localStorage.setItem("cartp",(carval) );
    }
    document.querySelector("#poi").addEventListener("click", checkpu);
@@ -560,7 +613,8 @@ function caltotal(){
             document.getElementById("Offer").append(temp);
             var t = parseInt(document.getElementById("pr").textContent);
             var change = (t*3)/10;
-            document.getElementById("pr").textContent = t - change;
+            document.getElementById("pr").textContent =t - change;
+            document.getElementById("spanAmount").textContent=t-change;
         }
         else{
           alert("Your Promo code is `keep shopping`")

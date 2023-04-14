@@ -23,9 +23,6 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
                 break;
             } 
         }
-
-
-        
         if(temp){
             window.location.href = "password.html";
         }else {
@@ -34,5 +31,6 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
         }
     }
     localStorage.setItem("userData", JSON.stringify(userData));
+    document.getElementById("email").value="";
 
 })

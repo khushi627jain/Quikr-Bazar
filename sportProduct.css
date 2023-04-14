@@ -83,6 +83,10 @@ margin-bottom: -12px;
   width: 40%;
   height: 2rem;
 }
+#showProduct button:hover{
+  background-color: black;
+  color: #0083ca;
+}
 /* ###########################################################3 */
 /* filterpart!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 */
 #sortSide{

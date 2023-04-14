@@ -16,10 +16,6 @@
     color: black;
 }
 
-
-
-       
-
         
         #cartprod{
             width: 80%;
@@ -425,8 +421,9 @@ if(cartAr===0){
 
 function displayCart(cartAr){
     document.querySelector("#child").textContent="";
-    // console.log(cartAr);
+    console.log(cartAr);
        cartAr.map(function(elem){
+        console.log(cartAr);
         var pyr=localStorage.getItem("sizeList");
        var div=document.createElement("div");
        div.setAttribute("id","cartprod");

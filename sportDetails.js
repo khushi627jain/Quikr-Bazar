@@ -32,6 +32,7 @@ function displayData(array){
         let mainDiv2=document.createElement("div")
         mainDiv1.setAttribute("id","innerMainDiv")
         mainDiv2.setAttribute("id","innerMainDiv")
+        mainDiv.setAttribute("id","mainDiv")
 
         let subDiv1=document.createElement("div")
         let subDivHead1=document.createElement("p")
@@ -94,7 +95,7 @@ function displayDataright(array){
         document.getElementById("category").append(span)
         
          document.getElementById("titleHead").textContent=ele.title
-         document.getElementById("priceShow").textContent=ele.price+"₹"
+         document.getElementById("priceShow").textContent="₹"+ele.price
     })
 }
 

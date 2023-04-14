@@ -18,7 +18,7 @@ data.map(function(ele){
    let image=document.createElement("img")
    image.src=ele.url
    let price=document.createElement("h3")
-      price.textContent=ele.price+"₹"
+      price.textContent="₹"+ele.price
    let title=document.createElement("p")
    title.textContent=ele.title
    let infoDiv=document.createElement("div")
@@ -71,6 +71,8 @@ function showAllDetails(ele){
         // url
         url = url.replace(`&_page=${pageNo}&_limit=7`, '&_page=1&_limit=7');
         url+=`&subCategory=${productType}`
+        pageNo=1;
+        document.getElementById("pageNo").textContent=pageNo
         console.log(url)
         main(url)
         }
@@ -252,7 +254,6 @@ function showAllDetails(ele){
     element.style.display="none"
   })
   
-
   // previous side
 document.getElementById("previous").addEventListener("click",previous)
 function previous(){
@@ -276,7 +277,6 @@ function next(){
   console.log(url)
     main(url);
 }
-
 
 
  main(url);

@@ -49,7 +49,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:30px
-    /* gap:0px 100px 0px 30px; */
+    
 }
 #showProduct>div{
  

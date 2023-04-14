@@ -24,6 +24,8 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
             } 
         }
 
+
+        
         if(temp){
             window.location.href = "password.html";
         }else {

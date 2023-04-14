@@ -14,11 +14,18 @@
     background-color: rgb(244, 252, 255);
     padding: 5%;
     margin-right: 10%;
-    /* border: 1px solid red; */
+
 
 }
+/* #imgBlock img{
+width:100px;;
+    height: 100px;
+      border: 1px solid rgb(0, 128, 255);
+      
+} */
 #leftSide > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     /* border: 1px solid red; */
 }
 
@@ -27,23 +34,20 @@ ul {
     font-size: 12px;
     line-height: 20px;
     color: rgb(127, 128, 130);
-    margin: 0;
+    margin: 0 o 0 0;
     font-weight: 400;
-    padding: 30px;
-}
+    padding: 20px 0 0 0;
+    /* border: 1px solid red; */
+    width:180px;
 
+}
 
 
 /* --------------RightSide ---------------*/
 #rightSide {
-
     margin-right: 20px;
-    ;
     margin-top: 10%;
-    ;
-
 }
-
 #loginName {
     color: #333;
     display: inline-block;
@@ -170,8 +174,6 @@ ul {
     font-weight: 500;
     padding: 3px 5px 10px 0;
     text-align: center;
-
-    border:1px solid #0e9c0d;
     
 }
 
@@ -228,3 +230,18 @@ ul {
     margin: 0 auto;
     width: max-content;
 }
+@media screen and (max-width: 1024px)  {
+    /* Styles for landscape screens wider than 1024px */
+    #container{
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 10px;;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    #leftSide{
+display: none;
+    }
+}
+
+
+  

@@ -2,9 +2,6 @@ div{
     /* border:1px solid rgb(128, 26, 0); */
     color:#333333;
 }
-body{
-    background-color: rgb(243,243,243);
-}
 a{
     text-decoration:none;
     }
@@ -30,7 +27,6 @@ color:black;
     margin:0 10%;
     
 }
-
 #firstLane{
     display:flex;
     justify-content: space-between;
@@ -39,8 +35,7 @@ color:black;
     color:#333333;
     margin-bottom: 10px;;
 }
-#firstLane{
-    display: flex;
+#firstLane div:nth-child(1){
     align-items: baseline;
 }
 #firstLaneLeft{
@@ -62,9 +57,6 @@ align-items: center;
 font-size: 14px;
 color:#333333;
 }
-
-
-/* ---------------------------------------- */
 #secondLane{
     display: flex;
     justify-content: space-between;
@@ -77,17 +69,19 @@ color:#333333;
     gap:20px;
 } 
 #secondLaneMiddle > p{
-    /* border: 5px solid rgb(128, 0, 119); */
     display: flex;
     align-self: center;
-    margin-top: 3px;
+    margin-top: 4px;
+}
+#secondLaneMiddle{
+   margin-top: -3px;;
 }
 #logo img{
     width:130%;
-    height: 50px;
+    height: 40px;
 }
 #search{
-    width:410px;
+    width:510px;
     height:40px;
     align-items: center;
     margin-top: 3px;;
@@ -96,7 +90,7 @@ color:#333333;
     border-radius: 5px 0 0 5px;
 }
 #searchBtn{
-    height:40px;
+    height:44px;
     align-items: center;
     margin: 3px 0 0 -22px;
     border:none;
@@ -109,7 +103,7 @@ color:#333333;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap:30px;
-    margin-right: 10px;;
+    margin-right: -20px;;
 }
 #secondLaneRight button{
     height:40px;
@@ -122,7 +116,7 @@ color:#333333;
     display: inline;
     justify-content: center;
     align-items: center;
-    padding-top: 6px;;
+    padding-top: 9px;;
 }
 /* ------------------------------------ */
 
@@ -147,6 +141,7 @@ color:#333333;
     text-align: center;
     padding-top: 10px;;
     margin-left: 8.5px;;
+    margin-top:10px;
   }
   
   .dropdown {
@@ -183,3 +178,36 @@ color:#333333;
   .dropdown:hover .dropbtn {
     background-color:rgb(0,139,206)
   }
+@media screen and (max-width: 1024px) and (min-width:768px) {
+  /* Styles for landscape screens wider than 1024px */
+  #thirdLane{
+    grid-template-columns:repeat(3,2fr);
+  }
+  #secondLaneRight button{
+    display: none;
+  }
+
+  #login{
+    padding-left:60px; ;
+  }
+  #search{
+    width:400px;
+    margin-left: 100px;;
+  }
+}
+
+@media screen and (max-width: 768px){
+    #search{
+        width:200px;
+        margin-left: 80px;;
+      }
+      #secondLaneRight button{
+        display: none;
+      }
+      #login{
+        padding-left:100px; ;
+      }
+      #thirdLane{
+display:none;
+      }
+}

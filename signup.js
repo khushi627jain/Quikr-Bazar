@@ -1,7 +1,7 @@
 
 
 let myForm = document.getElementById("myForm");
-let userData = [];
+let userData = JSON.parse(localStorage.getItem("userData"))|| [];
 myForm.addEventListener("submit", (event) => {
     event.preventDefault();
 

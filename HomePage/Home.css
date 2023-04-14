@@ -311,6 +311,7 @@
 
 /*==== responsive for extra */
 @media only screen and (min-width: 769px) {
+  
   .swiper-slide:first-child {
     transition: transform 100ms;
   }

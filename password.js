@@ -36,5 +36,3 @@ document.getElementById("myForm").addEventListener("submit", (event) => {
     document.getElementById("password").value="";
 
 })
-
-

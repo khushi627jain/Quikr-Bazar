@@ -552,3 +552,16 @@ background-color: black;
 border-radius: 50%;
 color: white;
 }
+#showMovies {
+  background-color:white;
+  position: absolute;
+  height: 200px;
+  width: 556px;
+  z-index: 99;
+  border: 2px solid #008bcf;
+  overflow-y: scroll;
+  display:none;
+  margin-left: 193px;
+  border-radius: 5px;
+  margin-top: -14px;
+}

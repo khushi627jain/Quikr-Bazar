@@ -2,7 +2,6 @@ let array=JSON.parse(localStorage.getItem("allProductDetails"))
 
 var cartAr=JSON.parse(localStorage.getItem("cartProducts")) || [];
 
-console.log(cartAr)
 function displayData(array){
     array.map(function(arr){
     
@@ -67,8 +66,6 @@ function displayData(array){
         subDiv4.append(subDivHead4,subDivData4)
         subDiv4.setAttribute("id","subDiv")
 
-        let midLine=document.createElement("hr");
-        midLine.setAttribute("id","midLine")
 mainDiv1.append(subDiv1,subDiv2)
 mainDiv2.append(subDiv3,subDiv4)
 mainDiv.append(mainDiv1,mainDiv2)
@@ -90,7 +87,6 @@ descPara.textContent=arr.description
 
 
 function displayDataright(array){
-   
     array.map(function(ele){
         let span=document.createElement("span")
         span.textContent="GENTLY USED"
@@ -99,9 +95,7 @@ function displayDataright(array){
         document.getElementById("category").append(span)
         
          document.getElementById("titleHead").textContent=ele.title
-         document.getElementById("priceShow").textContent=ele.price+"₹"
-        
-
+         document.getElementById("priceShow").textContent="₹"+ele.price
     })
 }
 

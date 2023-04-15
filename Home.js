@@ -4,8 +4,7 @@
 
     // fetching data from API and Showing on page
 
-  
-
+    
     // navbar js ==========
     let userData=JSON.parse(localStorage.getItem("userData"))||[];
 

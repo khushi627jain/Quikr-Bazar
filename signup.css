@@ -15,6 +15,7 @@
     background-color: rgb(244, 252, 255);
     padding: 5%;
     margin-right: 5%;
+    padding-top: 20%;;
     /* border: 1px solid #0e9c0d; */
     
 }
@@ -48,7 +49,6 @@ ul {
 
 /* --------------RightSide ---------------*/
 #rightSide {
-    /* margin-left: 10px; */
     margin-right: 20px;
     margin-top: 10%;
 

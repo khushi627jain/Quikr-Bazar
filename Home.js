@@ -22,7 +22,3 @@
     // navbar js ends===============
 
 
-    // for search 
-
-    
-const searching = document.getElementById("search").value ;

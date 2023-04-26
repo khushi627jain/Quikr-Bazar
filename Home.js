@@ -24,9 +24,6 @@
 
     // for search 
 
-    
-
-
 let timerId;
 function debounce(func,time){
     if(timerId){

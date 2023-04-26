@@ -102,6 +102,7 @@ function showAllDetails(){
   location.href="kidsDetails.html"
  
 }
+
 //=============
 document.getElementById("showMovies").append(movieCard)
 })
